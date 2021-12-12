@@ -11,10 +11,12 @@
   }
 
   @nest & h1 {
+    font-family: Georgia, serif;
     line-height: 1.25;
   }
 
   @nest & h2 {
+    font-family: Georgia, serif;
     line-height: 1.25;
   }
 
