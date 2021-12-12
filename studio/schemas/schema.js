@@ -6,8 +6,8 @@ import schemaTypes from "all:part:@sanity/base/schema-type";
 
 // document schemas
 import author from "./documents/author";
-import category from "./documents/category";
-import post from "./documents/post";
+import applicant from "./documents/applicant";
+import resume from "./documents/resume";
 import siteSettings from "./documents/siteSettings";
 
 // Object types
@@ -16,6 +16,7 @@ import bioPortableText from "./objects/bioPortableText";
 import excerptPortableText from "./objects/excerptPortableText";
 import mainImage from "./objects/mainImage";
 import authorReference from "./objects/authorReference";
+import contact from "./objects/contact";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -27,13 +28,14 @@ export default createSchema({
     // The following are document types which will appear
     // in the studio.
     siteSettings,
-    post,
-    category,
     author,
+    applicant,
+    resume,
     mainImage,
     authorReference,
     bodyPortableText,
     bioPortableText,
+    contact,
     excerptPortableText,
 
     // When added to this list, object types can be used as

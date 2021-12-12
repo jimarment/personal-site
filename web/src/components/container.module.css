@@ -1,4 +1,4 @@
-@import '../styles/custom-media.css';
+@import "../styles/custom-media.css";
 
 .root {
   box-sizing: border-box;
@@ -8,5 +8,33 @@
 
   @media (--media-min-small) {
     padding: 2em;
+  }
+
+  @nest & h1 {
+    line-height: 1.25;
+  }
+
+  @nest & h2 {
+    line-height: 1.25;
+  }
+
+  @nest & img {
+    border: 20px solid #fff;
+    float: right;
+    margin-bottom: 80px;
+    margin-left: 80px;
+    max-width: 100%;
+
+    @media (max-width: 800px) {
+      float: left;
+      margin-bottom: 10px;
+      margin-left: 0;
+      margin-right: 30px;
+    }
+
+    @media (max-width: 580px) {
+      float: none;
+      margin-right: 0;
+    }
   }
 }

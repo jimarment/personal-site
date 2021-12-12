@@ -1,5 +1,4 @@
 import { graphql } from "gatsby";
-import BlogPost from "../components/blog-post";
 import React from "react";
 import GraphQLErrorList from "../components/graphql-error-list";
 import Layout from "../containers/layout";
@@ -8,7 +7,7 @@ import SEO from "../components/seo";
 import { toPlainText } from "../lib/helpers";
 
 export const query = graphql`
-  query BlogPostTemplateQuery($id: String!) {
+  query ResumeTemplateQuery($id: String!) {
     post: sanityPost(id: { eq: $id }) {
       id
       publishedAt
@@ -65,7 +64,7 @@ const BlogPostTemplate = (props) => {
       {errors && <SEO title="GraphQL Error" />}
       {post && (
         <SEO
-          title={post.title || "Untitled"}
+          title={(post.title || "Untitled") + " Resume"}
           description={toPlainText(post._rawExcerpt)}
           image={post.mainImage}
         />
@@ -77,7 +76,11 @@ const BlogPostTemplate = (props) => {
         </Container>
       )}
 
-      {post && <BlogPost {...post} />}
+      {post && (
+        <div>
+          <h1>Hello Resume</h1>
+        </div>
+      )}
     </Layout>
   );
 };

@@ -1,5 +1,5 @@
-@import '../styles/custom-media.css';
-@import '../styles/custom-properties.css';
+@import "../styles/custom-media.css";
+@import "../styles/custom-properties.css";
 
 .root {
   position: relative;
@@ -19,8 +19,10 @@
 }
 
 .branding {
-  font-weight: 600;
+  font-size: 24px;
+  font-weight: bold;
   flex: 1;
+  line-height: 1.1;
 
   @nest & a {
     display: inline-block;
@@ -31,9 +33,18 @@
     @media (hover: hover) {
       @nest &:hover {
         color: var(--color-accent);
+        text-decoration: underline;
       }
     }
   }
+}
+
+.name {
+  font-size: 36px;
+}
+
+.title {
+  color: var(--color-accent);
 }
 
 .toggleNavButton {
@@ -43,8 +54,8 @@
   background: none;
   margin: 0;
   padding: calc(14 / 17 / 2 * 1rem);
-  outline: none;
   color: inherit;
+  cursor: pointer;
 
   & svg {
     display: block;
@@ -78,7 +89,7 @@
 
   @media (--media-max-small) {
     position: absolute;
-    background: var(--color-white);
+    background: var(--color-background);
     color: var(--color-black);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
     left: 0;

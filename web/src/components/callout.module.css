@@ -1,0 +1,29 @@
+@import "../styles/custom-media.css";
+@import "../styles/custom-properties.css";
+
+.root {
+  background: var(--color-white);
+  clear: both;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 100px;
+  max-width: 960px;
+  margin: 60px auto -150px;
+  padding: 5em;
+  position: relative;
+
+  @nest & h2 {
+    font-size: 48px;
+    font-weight: normal;
+
+    @media (max-width: 480px) {
+      font-size: 32px;
+    }
+  }
+
+  @media (max-width: 700px) {
+    grid-template-columns: 1fr;
+    grid-gap: 0;
+    padding: 1em 2em 2em;
+  }
+}

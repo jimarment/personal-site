@@ -12,8 +12,7 @@ export default {
                 "NOTE: Because these sites are static builds, they need to be re-deployed to see the changes when documents are published.",
               sites: [
                 {
-                  buildHookId:
-                    "61a704932c173498859abbee",
+                  buildHookId: "61a704932c173498859abbee",
                   title: "Sanity Studio",
                   name: "sanity-gatsby-blog-studio-9eo5bkbh",
                   apiId: "7a5df77c-c585-463f-85a0-056b2bc139e9",
@@ -31,8 +30,7 @@ export default {
         data: [
           {
             title: "GitHub repo",
-            value:
-              "https://github.com/jimarment/sanity-gatsby-blog",
+            value: "https://github.com/jimarment/sanity-gatsby-blog",
             category: "Code",
           },
           {
@@ -44,14 +42,5 @@ export default {
       },
     },
     { name: "project-users", layout: { height: "auto" } },
-    {
-      name: "document-list",
-      options: {
-        title: "Recent blog posts",
-        order: "_createdAt desc",
-        types: ["post"],
-      },
-      layout: { width: "medium" },
-    },
   ],
 };

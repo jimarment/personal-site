@@ -17,16 +17,16 @@ export const getDefaultDocumentNode = (props) => {
    * you can set up that logic in here too.
    * https://www.sanity.io/docs/structure-builder-reference#getdefaultdocumentnode-97e44ce262c9
    */
-  const { schemaType } = props;
-  if (schemaType == "post") {
-    return S.document().views([
-      S.view.form(),
-      S.view
-        .component(IframePreview)
-        .title("Web preview")
-        .options({ previewURL }),
-    ]);
-  }
+  // const { schemaType } = props;
+  // if (schemaType == "post") {
+  //   return S.document().views([
+  //     S.view.form(),
+  //     S.view
+  //       .component(IframePreview)
+  //       .title("Web preview")
+  //       .options({ previewURL }),
+  //   ]);
+  // }
   return S.document().views([S.view.form()]);
 };
 
@@ -54,27 +54,14 @@ export default () =>
         ),
       S.divider(),
       S.listItem()
-        .title("Blog posts")
-        .icon(MdDescription)
-        .schemaType("post")
-        .child(S.documentTypeList("post").title("Blog posts")),
-      S.listItem()
         .title("Authors")
         .icon(MdPerson)
         .schemaType("author")
         .child(S.documentTypeList("author").title("Authors")),
-      S.listItem()
-        .title("Categories")
-        .icon(MdLocalOffer)
-        .schemaType("category")
-        .child(S.documentTypeList("category").title("Categories")),
       // `S.documentTypeListItems()` returns an array of all the document types
       // defined in schema.js. We filter out those that we have
       // defined the structure above.
       ...S.documentTypeListItems().filter(
-        (listItem) =>
-          !["category", "author", "post", "siteSettings"].includes(
-            listItem.getId()
-          )
+        (listItem) => !["author", "siteSettings"].includes(listItem.getId())
       ),
     ]);
