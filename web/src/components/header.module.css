@@ -23,6 +23,7 @@
   font-weight: bold;
   flex: 1;
   line-height: 1.1;
+  text-align: center;
 
   @nest & a {
     display: inline-block;
