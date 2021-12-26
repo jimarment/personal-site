@@ -54,17 +54,6 @@ const TestResult = ({
       buttons.push(
         <button
           onClick={() => {
-            if (patientNumber === 0) {
-              loadNewPage(PATIENTS.length - 1);
-            } else {
-              loadNewPage(patientNumber - 1);
-            }
-          }}
-        >
-          Previous
-        </button>,
-        <button
-          onClick={() => {
             if (patientNumber === PATIENTS.length - 1) {
               loadNewPage(0);
             } else {
@@ -73,6 +62,17 @@ const TestResult = ({
           }}
         >
           Next
+        </button>,
+        <button
+          onClick={() => {
+            if (patientNumber === 0) {
+              loadNewPage(PATIENTS.length - 1);
+            } else {
+              loadNewPage(patientNumber - 1);
+            }
+          }}
+        >
+          Previous
         </button>
       );
     } else {

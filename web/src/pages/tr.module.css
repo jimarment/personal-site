@@ -74,6 +74,7 @@
   bottom: 0;
   box-sizing: border-box;
   display: flex;
+  flex-direction: row-reverse;
   justify-content: space-between;
   padding: 8px;
   position: fixed;
