@@ -1,0 +1,80 @@
+.wrapper {
+  margin: auto;
+  max-width: 800px;
+}
+
+.banner {
+  background: #20588b url(https://www.bizzflo.com/images/sp/2669/84388125.jpg);
+  background-position: center;
+  height: 90px;
+  width: 100%;
+}
+
+.content {
+  border: 1px solid #ddd;
+  border-top: 0;
+  padding: 8px 32px 24px;
+  margin-bottom: 24px;
+
+  @media (max-width: 500px) {
+    padding: 8px 16px 16px;
+    margin-bottom: 16px;
+  }
+
+  @nest & h1 {
+    line-height: 1.1;
+    margin-bottom: 0.2em;
+  }
+
+  @nest & h2 {
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 24px;
+  }
+}
+
+.field {
+  font-size: 14px;
+
+  @nest & strong {
+    font-family: monospace;
+    font-size: 16px;
+  }
+}
+
+.hr {
+  border: 1px solid #ddd;
+  border-top: 0;
+}
+
+.footer {
+  font-size: 10px;
+  margin-top: 24px;
+
+  @nest & p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.companyAddress {
+  font-size: 12px;
+  padding-bottom: 64px;
+  text-align: center;
+}
+
+.siteInfo {
+  text-align: center;
+  font-size: var(--font-small-size);
+  line-height: var(--font-small-line-height);
+}
+
+.buttonBar {
+  background: #ddd;
+  bottom: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+  position: fixed;
+  width: 100%;
+}
