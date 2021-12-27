@@ -33,6 +33,11 @@
     margin-bottom: 16px;
   }
 
+  @media (max-width: 800px) {
+    border-left: 0;
+    border-right: 0;
+  }
+
   @nest & h1 {
     line-height: 1.1;
     margin-bottom: 0.2em;
