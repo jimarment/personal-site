@@ -1,6 +1,17 @@
+:global(body) {
+  background-color: white;
+  border: 0;
+}
+
 .wrapper {
   margin: auto;
   max-width: 800px;
+}
+
+.fullscreenBtn {
+  position: fixed;
+  top: 8px;
+  left: 8px;
 }
 
 .banner {

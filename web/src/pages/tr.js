@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import * as styles from "./tr.module.css";
 
 const PATIENTS = [
@@ -41,6 +41,26 @@ const TestResult = ({
   let lastName = lastNameDefault;
   let dob = dobDefault;
 
+  const [isFullscreen, setIsFullscreen] = useState(false);
+
+  const toggleFullscreen = (close = false) => {
+    // if (!close) {
+    document.documentElement
+      .requestFullscreen()
+      .then(() => {
+        setIsFullscreen(true);
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+    // } else {
+    //   document
+    //     .exitFullscreen()
+    //     .then(() => setIsFullscreen(false))
+    //     .catch((err) => console.error(err));
+    // }
+  };
+
   const buttons = [];
 
   try {
@@ -53,6 +73,7 @@ const TestResult = ({
 
       buttons.push(
         <button
+          key="next"
           onClick={() => {
             if (patientNumber === PATIENTS.length - 1) {
               loadNewPage(0);
@@ -64,6 +85,7 @@ const TestResult = ({
           Next
         </button>,
         <button
+          key="prev"
           onClick={() => {
             if (patientNumber === 0) {
               loadNewPage(PATIENTS.length - 1);
@@ -78,6 +100,7 @@ const TestResult = ({
     } else {
       buttons.push(
         <button
+          key="next"
           onClick={() => {
             loadNewPage(1);
           }}
@@ -92,6 +115,11 @@ const TestResult = ({
 
   return (
     <div>
+      {!isFullscreen && (
+        <button className={styles.fullscreenBtn} onClick={toggleFullscreen}>
+          Fullscreen
+        </button>
+      )}
       <div className={styles.wrapper}>
         <div className={styles.banner} />
 
