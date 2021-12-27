@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
+import Helmet from "react-helmet";
 import * as styles from "./tr.module.css";
 
 const PATIENTS = [
@@ -115,6 +116,18 @@ const TestResult = ({
 
   return (
     <div>
+      <Helmet
+        meta={[
+          {
+            name: "apple-mobile-web-app-capable",
+            content: "yes",
+          },
+          {
+            name: "mobile-web-app-capable",
+            content: "yes",
+          },
+        ]}
+      />
       {!isFullscreen && (
         <button className={styles.fullscreenBtn} onClick={toggleFullscreen}>
           Fullscreen
