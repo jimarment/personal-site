@@ -76,41 +76,42 @@ const IndexPage = (props) => {
       <Container>
         <h1>My name is Jim, and I&apos;m a software engineer leader.</h1>
         <p>
-          I&apos;ve spent the last decade of my life working for Zillow.com. In
-          my time, I&apos;ve seen the company grow from 300 employees to nearly
-          8,000. As the company has grown in maturity, I have also grown
-          professionally. Starting as an entry-level engineer, I&apos;ve
-          fostered both my engineering and leadership skills to be one of the
-          most tenured members of the product development org.
+          I’ve spent the last 16 years of my life working with web technologies. The bulk of that time, I worked at Zillow.com where my ownership ranged across the primary home shopping experience and the company&apos;s central design system.
         </p>
         <p>
-          During that time, I&apos;ve held various roles: team lead, engineer
-          manager, senior engineer. One thing I&apos;ve found vital to success
-          in all of these roles is an intentional focus on the team. My greatest
-          accomplishments at Zillow have been built on that foundation. The
-          relationships I&apos;ve built, the trust developed, and the loyalty
-          shown are the linchpins to the incredible products we&apos;ve shipped.
+        More recently, I&apos;ve been working at Stripe where I build user-facing checkout interfaces allowing businesses to collect payment via Stripe&apos;s payment APIs. Through my career, I&apos;ve fostered both my engineering and leadership skills to be a well-rounded and highly experienced frontend focusessed engineer.
         </p>
-        <p>Some of my favorite projects at Zillow include:</p>
+        <p>
+          I&apos;ve held various roles in my career: tech lead, engineer manager, engineer. One thing I&apos;ve found vital to success in all of these roles is an intentional focus on the team. My greatest professional accomplishments have been built on that foundation. The relationships I&apos;ve built, the trust developed, and the loyalty shown are the linchpins to the incredible products we&apos;ve shipped.
+        </p>
+        <p>Some of my favorite focus areas:</p>
         <ul>
           <li>
-            Pitching, building, and implementing the company&apos;s first design
-            system.
+          Working with design systems to improve dev experience and build consistent user experiences.
           </li>
           <li>
-            Leading accessibility improvements across all Zillow Group brands.
+          Accessibility as a fundamental aspect of usability.
           </li>
           <li>
-            Crafting user experiences across the most trafficked pages on
-            Zillow.com
+          Creating subtly delightful experiences for users through an emphasis on quality and craftsmanship.
           </li>
         </ul>
         <p>
-          These last 10-years have been life-changing. I will forever be
-          grateful for my time at Zillow, and the blessing it has been to my
-          family. I look forward to my next venture, and finding another company
-          to mutually invest into each other&apos;s lives.
+        My time working in web technologies has been life-changing. I will forever be grateful for the people I’ve met, things I’ve learned and products I’ve shipped. I look forward to my next venture, and finding another company to mutually invest into each other&apos;s lives.
         </p>
+
+        <hr />
+
+        <h2>My work</h2>
+        <p>The products I've worked on continue to change, but they include significant frontend development for:</p>
+        <ul>
+          <li><a href="https://stripe.com/payments/elements">Stripe's Payment Element</a></li>
+          <li><a href="https://www.zillow.com/homedetails/7316-Riverview-Rd-Snohomish-WA-98290/2052934177_zpid/">Zillow's home details pages</a></li>
+          <li><a href="https://www.zillow.com/">Zillow's home page</a></li>
+          <li>
+            <a href="https://www.zillow.com/user/acct/login/">Zillow's login/registration</a>
+          </li>
+        </ul>
 
         <hr />
 
